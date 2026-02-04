@@ -1,101 +1,63 @@
 # Book API
 
-## Simple Node.js + Express + Mongoose application implementing full CRUD for books with a basic frontend.
+Simple REST API using Node.js, Express and Mongoose for managing books (CRUD), with a small frontend served from the `public` folder.
 
-### Project Structure
-book-api/
+Summary: create, read, update and delete book records; includes a minimal web UI for basic interactions.
 
-│
+Requirements:
+- Node.js (v16+)
+- MongoDB (local or cloud URI)
 
-├── server.js
+Environment variables (create a `.env` file):
+- `MONGODB_URI` — MongoDB connection string
+- `PORT` — server port (default: 5000)
 
-├── package.json
+Install and run:
 
-├── .env
+1. Install dependencies:
 
-├── .gitignore
+```
+npm install
+```
 
-│
+2. Start the server:
 
-├── config/
+```
+node server.js
+```
 
-│   └── db.js
+Development (optional):
 
-│
+```
+npm install -D nodemon
+# run: npx nodemon server.js
+```
 
-├── models/
+Project structure (key files):
+- `server.js` — application entry point
+- `package.json` — dependencies and scripts
+- `config/db.js` — MongoDB connection setup
+- `models/` — Mongoose models (`Book.js`, `Review.js`, `User.js`)
+- `controllers/` — request handlers
+- `routes/` — API routes (`books.js`, `reviews.js`, `auth.js`)
+- `middlewares/` — middleware (auth, error handling)
+- `public/` — simple frontend (HTML + JS)
 
-│   └── Book.js
+API Endpoints:
 
-│
+- POST   /api/books        — create a new book
+- GET    /api/books        — get all books
+- GET    /api/books/:id    — get a single book by ID
+- PUT    /api/books/:id    — update a book by ID
+- DELETE /api/books/:id    — delete a book by ID
 
-├── routes/
+There are also routes for reviews and authentication in `routes/reviews.js` and `routes/auth.js`.
 
-│   └── books.js
+Usage examples: use Postman or `curl` to call the endpoints above. After starting the server, open the frontend at `http://localhost:<PORT>/`.
 
-│
+Next steps I can do for you:
+- add `start` and `dev` scripts to `package.json`
+- expand the README with authentication examples and sample requests
 
-├── controllers/
-
-│   └── bookController.js
-
-│
-
-├── middlewares/
-
-│   └── errorHandler.js
-
-│
-
-├── public/
-
-│   ├── index.html
-
-│   └── script.js
-
-│
-
-└── README.md
-
-
-### Open the frontend in your browser:
-
-http://localhost:5000/
-
-## API Endpoints
-
-POST	/api/books	Create a new book
-
-GET	/api/books	Get all books
-
-GET	/api/books/:id	Get a single book by ID
-
-PUT	/api/books/:id	Update a book by ID
-
-DELETE	/api/books/:id	Delete a book by ID
-
-## API Examples (Postman)
- Create a Book (POST)
-
-<img src="photo_2026-01-18_22-28-57.jpg">
-
- Get All Books (GET)
-
-<img src="photo_2026-01-18_22-28-53.jpg">
-
- Get Book by ID (GET)
-
-<img src="photo_2026-01-18_22-28-50.jpg">
-
- Update Book (PUT)
-
-<img src="photo_2026-01-18_22-28-50.jpg">
-
- Delete Book (DELETE)
-
-<img src="photo_2026-01-18_22-28-43.jpg">
-
- WEB-page
-
-<img src="photo_2026-01-18_22-28-46.jpg">
+The file has been cleaned from conflict markers and translated to English.
 
