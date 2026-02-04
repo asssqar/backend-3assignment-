@@ -59,5 +59,4 @@ Next steps I can do for you:
 - add `start` and `dev` scripts to `package.json`
 - expand the README with authentication examples and sample requests
 
-The file has been cleaned from conflict markers and translated to English.
 
