@@ -56,6 +56,8 @@ There are also routes for reviews and authentication in `routes/reviews.js` and 
 Usage examples: use Postman or `curl` to call the endpoints above. After starting the server, open the frontend at `http://localhost:<PORT>/`.
 <img width="1919" height="1023" alt="{1756CA0B-4995-48BC-8611-80F171855E52}" src="https://github.com/user-attachments/assets/d42a1766-7043-4564-a9a4-f6456eda7667" />
 <img width="1920" height="1028" alt="{9179689B-30D6-4E21-8FE3-987DB8431948}" src="https://github.com/user-attachments/assets/dd56efdc-ab8c-4bc7-b0fa-afbfcba79f6f" />
+<img width="880" height="731" alt="изображение" src="https://github.com/user-attachments/assets/39bf65e6-1262-4b33-8ecb-21fbe48823b8" />
+
 
 
 Next steps I can do for you:
